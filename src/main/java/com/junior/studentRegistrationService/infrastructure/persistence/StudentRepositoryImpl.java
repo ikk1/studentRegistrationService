@@ -20,13 +20,13 @@ public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public List<Student> findByEmail(String email) {
         List<StudentEntity> studentsByEmail = studentRepositoryJPA.findByEmail(email);
-        List<Student> ret = studentsByEmail.stream().map(s -> studentMapper.toDomain(s)).collect(Collectors.toList());
+        List<Student> ret = studentsByEmail.stream().map(s -> studentMapper.toDomainEntity(s)).collect(Collectors.toList());
         return ret;
     }
 
     @Override
     public void registerStudent(Student student) {
-        StudentEntity studentEntity = studentMapper.toEntity(student);
+        StudentEntity studentEntity = studentMapper.toJPAEntity(student);
         studentRepositoryJPA.save(studentEntity);
     }
 }

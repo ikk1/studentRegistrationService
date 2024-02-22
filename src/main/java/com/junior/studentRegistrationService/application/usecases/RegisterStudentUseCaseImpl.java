@@ -1,9 +1,9 @@
 package com.junior.studentRegistrationService.application.usecases;
 
 import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
-import com.junior.studentRegistrationService.application.usecases.mappers.StudentMapper;
 import com.junior.studentRegistrationService.domain.entities.Student;
 import com.junior.studentRegistrationService.domain.repositories.StudentRepository;
+import com.junior.studentRegistrationService.infrastructure.persistence.mappers.StudentMapper;
 
 import io.micrometer.common.util.StringUtils;
 
@@ -20,7 +20,7 @@ public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase{
     @Override
     public void execute(StudentDTO studentDTO){
         validateStudent(studentDTO);
-        Student student = studentMapper.toEntity(studentDTO);
+        Student student = studentMapper.toDomainEntity(studentDTO);
         studentRepository.registerStudent(student);
     }
 
