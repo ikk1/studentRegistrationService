@@ -1,26 +1,27 @@
 package com.junior.studentRegistrationService.infrastructure.persistence.mappers;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
 import com.junior.studentRegistrationService.domain.entities.Student;
-import com.junior.studentRegistrationService.domain.valueobjects.EmailMapper;
+import com.junior.studentRegistrationService.domain.valueobjects.Email;
 import com.junior.studentRegistrationService.infrastructure.persistence.StudentEntity;
 
-@Mapper(componentModel = "spring", uses = EmailMapper.class)
-public interface StudentMapper {
+public class StudentMapper {
 
-    @Mapping(target = "email", source = "email")
-    StudentEntity toJPAEntity(Student student);
+    public StudentEntity toJPAEntity(Student student){
+        return new StudentEntity(student.getName(), student.getEmail().getAddress(), student.getAddress(), student.getCourse());
+    }
 
-    @Mapping(target = "email", source = "email")
-    Student toDomainEntity(StudentEntity studentEntity);
+    public Student toDomainEntity(StudentEntity studentEntity){
+        return new Student(studentEntity.getName(), new Email(studentEntity.getEmail()), studentEntity.getAddress(), studentEntity.getCourse());
+    }
     
-    @Mapping(target = "email", source = "email")
-    Student toDomainEntity(StudentDTO studentDTO);
+    public Student toDomainEntity(StudentDTO studentDTO){
+        return new Student(studentDTO.name(), new Email(studentDTO.email()), studentDTO.address(), studentDTO.course());
+    }
 
-    @Mapping(target = "email", source = "email")
-    StudentDTO toDto(Student student);
+    public StudentDTO toDto(Student student){
+        return new StudentDTO(student.getName(), student.getEmail().getAddress(), student.getAddress(), student.getCourse());
+    }
     
 }

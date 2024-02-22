@@ -23,4 +23,9 @@ public class StudentConfig {
         return new StudentRepositoryImpl(studentRepositoryJPA, studentMapper);
     }
 
+    @Bean
+    StudentMapper studentMapper(){
+        return new StudentMapper();
+    }
+
 }
