@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService.main;
+package com.junior.studentRegistrationService.infrastructure.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

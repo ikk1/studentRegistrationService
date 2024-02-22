@@ -1,8 +1,7 @@
 package com.junior.studentRegistrationService.domain.valueobjects;
 
-import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
-@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+@Mapper(componentModel = "spring")
 public interface EmailMapper {
 
     default String map(Email email) {

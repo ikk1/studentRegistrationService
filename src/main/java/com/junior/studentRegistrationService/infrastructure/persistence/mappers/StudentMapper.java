@@ -1,6 +1,5 @@
 package com.junior.studentRegistrationService.infrastructure.persistence.mappers;
 
-import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -9,7 +8,7 @@ import com.junior.studentRegistrationService.domain.entities.Student;
 import com.junior.studentRegistrationService.domain.valueobjects.EmailMapper;
 import com.junior.studentRegistrationService.infrastructure.persistence.StudentEntity;
 
-@Mapper(componentModel = "spring", uses = EmailMapper.class, injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+@Mapper(componentModel = "spring", uses = EmailMapper.class)
 public interface StudentMapper {
 
     @Mapping(target = "email", source = "email")
