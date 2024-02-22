@@ -1,13 +1,18 @@
 package com.junior.studentRegistrationService.application.usecases.mappers;
 
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
 import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
 import com.junior.studentRegistrationService.domain.entities.Student;
+import com.junior.studentRegistrationService.domain.valueobjects.EmailMapper;
 
-public class StudentMapper {
-    public static StudentDTO toDto(Student student) {
-        return new StudentDTO(student.getName(), student.getEmail(), student.getAddress(), student.getCourse());
-    }
-    public static Student toEntity(StudentDTO studentDTO){
-        return new Student(studentDTO.name(), studentDTO.email(), studentDTO.address(), studentDTO.course());
-    }
+@Mapper(uses = EmailMapper.class)
+public interface StudentMapper {
+
+    @Mapping(target = "email", source = "email")
+    StudentDTO toDto(Student student);
+
+    @Mapping(target = "email", source = "email")
+    Student toEntity(StudentDTO studentDTO);
 }

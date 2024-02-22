@@ -10,15 +10,17 @@ import io.micrometer.common.util.StringUtils;
 public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase{
 
     private final StudentRepository studentRepository;
+    private final StudentMapper studentMapper;
 
-    public RegisterStudentUseCaseImpl(StudentRepository studentRepository){
+    public RegisterStudentUseCaseImpl(StudentRepository studentRepository, StudentMapper studentMapper){
         this.studentRepository = studentRepository;
+        this.studentMapper = studentMapper;
     }
 
     @Override
     public void execute(StudentDTO studentDTO){
         validateStudent(studentDTO);
-        Student student = StudentMapper.toEntity(studentDTO);
+        Student student = studentMapper.toEntity(studentDTO);
         studentRepository.registerStudent(student);
     }
 
