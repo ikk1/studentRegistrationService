@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService.infrastructure.web.dto;
+package com.junior.studentregistrationservice.infrastructure.web.dto;
 
 public enum CourseDTO {
 

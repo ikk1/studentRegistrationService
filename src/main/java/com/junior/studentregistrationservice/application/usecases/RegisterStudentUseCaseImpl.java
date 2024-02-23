@@ -1,7 +1,7 @@
-package com.junior.studentRegistrationService.application.usecases;
+package com.junior.studentregistrationservice.application.usecases;
 
-import com.junior.studentRegistrationService.domain.Student;
-import com.junior.studentRegistrationService.domain.StudentRepository;
+import com.junior.studentregistrationservice.domain.Student;
+import com.junior.studentregistrationservice.domain.StudentRepository;
 
 public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase {
 

@@ -1,8 +1,6 @@
-package com.junior.studentRegistrationService.domain;
+package com.junior.studentregistrationservice.domain;
 
 import java.util.List;
-
-import com.junior.studentRegistrationService.domain.Student;
 
 public interface StudentRepository {
 

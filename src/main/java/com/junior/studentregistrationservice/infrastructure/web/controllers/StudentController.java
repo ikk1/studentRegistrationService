@@ -1,14 +1,14 @@
-package com.junior.studentRegistrationService.infrastructure.web.controllers;
+package com.junior.studentregistrationservice.infrastructure.web.controllers;
 
-import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
+import com.junior.studentregistrationservice.infrastructure.mappers.StudentMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.junior.studentRegistrationService.application.usecases.RegisterStudentUseCaseImpl;
-import com.junior.studentRegistrationService.infrastructure.web.dto.StudentDTO;
+import com.junior.studentregistrationservice.application.usecases.RegisterStudentUseCaseImpl;
+import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
 
 @RestController
 public class StudentController {

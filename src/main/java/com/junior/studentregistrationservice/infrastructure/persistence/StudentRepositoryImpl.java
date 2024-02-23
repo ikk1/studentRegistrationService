@@ -1,11 +1,11 @@
-package com.junior.studentRegistrationService.infrastructure.persistence;
+package com.junior.studentregistrationservice.infrastructure.persistence;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.junior.studentRegistrationService.domain.Student;
-import com.junior.studentRegistrationService.domain.StudentRepository;
-import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
+import com.junior.studentregistrationservice.domain.Student;
+import com.junior.studentregistrationservice.domain.StudentRepository;
+import com.junior.studentregistrationservice.infrastructure.mappers.StudentMapper;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.junior</groupId>
-	<artifactId>studentRegistrationService</artifactId>
+	<artifactId>student-registration-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>studentRegistrationService</name>
+	<name>Student Registration Service</name>
 	<description>Simple Student Registration Service</description>
 	<properties>
 		<java.version>17</java.version>

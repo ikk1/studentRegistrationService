@@ -1,6 +1,6 @@
-package com.junior.studentRegistrationService.infrastructure.persistence;
+package com.junior.studentregistrationservice.infrastructure.persistence;
 
-import com.junior.studentRegistrationService.domain.Course;
+import com.junior.studentregistrationservice.domain.Course;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

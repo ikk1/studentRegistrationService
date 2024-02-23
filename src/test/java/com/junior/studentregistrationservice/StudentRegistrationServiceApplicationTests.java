@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService;
+package com.junior.studentregistrationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

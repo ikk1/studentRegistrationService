@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService.domain;
+package com.junior.studentregistrationservice.domain;
 
 import io.micrometer.common.util.StringUtils;
 

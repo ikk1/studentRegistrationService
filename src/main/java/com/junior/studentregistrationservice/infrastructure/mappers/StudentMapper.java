@@ -1,12 +1,11 @@
-package com.junior.studentRegistrationService.infrastructure.mappers;
+package com.junior.studentregistrationservice.infrastructure.mappers;
 
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
-import com.junior.studentRegistrationService.infrastructure.web.dto.StudentDTO;
-import com.junior.studentRegistrationService.domain.Student;
-import com.junior.studentRegistrationService.infrastructure.persistence.StudentEntity;
+import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
+import com.junior.studentregistrationservice.domain.Student;
+import com.junior.studentregistrationservice.infrastructure.persistence.StudentEntity;
 
 @Mapper(componentModel = "spring",
         uses = ValueObjectMapper.class,
