@@ -1,6 +1,7 @@
 package com.junior.studentRegistrationService.infrastructure.services;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.junior.studentRegistrationService.infrastructure.messaging.StudentCreatedMessage;
@@ -15,7 +16,11 @@ public class RabbitMQSenderService {
     }
 
     public void sendMessage(String name, String email) {
-        StudentCreatedMessage message = new StudentCreatedMessage(name, email);
-        rabbitTemplate.convertAndSend("student-exchange", "student.created", message);
+        try {
+            StudentCreatedMessage message = new StudentCreatedMessage(name, email);
+            rabbitTemplate.convertAndSend("student.exchange", "student.created", message);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
