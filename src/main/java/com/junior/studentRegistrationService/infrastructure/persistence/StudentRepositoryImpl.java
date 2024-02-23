@@ -1,29 +1,36 @@
 package com.junior.studentRegistrationService.infrastructure.persistence;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
 import com.junior.studentRegistrationService.domain.Student;
 import com.junior.studentRegistrationService.domain.StudentRepository;
+import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
 
 @Component
 public class StudentRepositoryImpl implements StudentRepository {
 
-    private final StudentRepository studentRepository;
+    private final StudentRepositoryJPA studentRepositoryJPA;
+    private final StudentMapper studentMapper;
 
-    public StudentRepositoryImpl(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
+    public StudentRepositoryImpl(StudentRepositoryJPA studentRepositoryJPA, StudentMapper studentMapper) {
+        this.studentRepositoryJPA = studentRepositoryJPA;
+        this.studentMapper = studentMapper;
     }
 
     @Override
     public List<Student> findByEmail(String email) {
-        List<Student> studentsByEmail = studentRepository.findByEmail(email);
-        return studentsByEmail;
+        List<StudentEntity> studentsByEmail = studentRepositoryJPA.findByEmail(email);
+        List<Student> ret = studentsByEmail.stream().map(s -> studentMapper.toDomainEntity(s))
+                .collect(Collectors.toList());
+        return ret;
     }
 
     @Override
     public void registerStudent(Student student) {
-        studentRepository.registerStudent(student);
+        StudentEntity studentEntity = studentMapper.toJPAEntity(student);
+        studentRepositoryJPA.save(studentEntity);
     }
 }
