@@ -8,7 +8,6 @@ import com.junior.studentregistrationservice.application.usecases.RegisterStuden
 import com.junior.studentregistrationservice.infrastructure.persistence.StudentRepositoryImpl;
 
 @Configuration
-@ComponentScan("com.junior.studentregistrationservice.infrastructure.persistence.mappers")
 public class StudentConfig {
     
     @Bean
