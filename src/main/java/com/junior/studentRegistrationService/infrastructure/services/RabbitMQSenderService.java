@@ -1,7 +1,6 @@
 package com.junior.studentRegistrationService.infrastructure.services;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.junior.studentRegistrationService.infrastructure.messaging.StudentCreatedMessage;
