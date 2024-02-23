@@ -1,5 +1,6 @@
 package com.junior.studentRegistrationService.application.usecases;
 
+import com.junior.studentRegistrationService.application.services.RabbitMQSenderService;
 import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
 import com.junior.studentRegistrationService.domain.entities.Student;
 import com.junior.studentRegistrationService.domain.repositories.StudentRepository;
@@ -11,10 +12,12 @@ public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase{
 
     private final StudentRepository studentRepository;
     private final StudentMapper studentMapper;
+    private final RabbitMQSenderService rabbitMQSenderService;
 
-    public RegisterStudentUseCaseImpl(StudentRepository studentRepository, StudentMapper studentMapper){
+    public RegisterStudentUseCaseImpl(StudentRepository studentRepository, StudentMapper studentMapper, RabbitMQSenderService rabbitMQSenderService){
         this.studentRepository = studentRepository;
         this.studentMapper = studentMapper;
+        this.rabbitMQSenderService = rabbitMQSenderService;
     }
 
     @Override
@@ -22,6 +25,7 @@ public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase{
         validateStudent(studentDTO);
         Student student = studentMapper.toDomainEntity(studentDTO);
         studentRepository.registerStudent(student);
+        rabbitMQSenderService.sendMessage(studentDTO.name(), studentDTO.email());
     }
 
     @Override
