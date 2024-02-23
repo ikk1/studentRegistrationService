@@ -3,9 +3,9 @@ package com.junior.studentRegistrationService.infrastructure.persistence;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.junior.studentRegistrationService.domain.entities.Student;
-import com.junior.studentRegistrationService.domain.repositories.StudentRepository;
-import com.junior.studentRegistrationService.infrastructure.persistence.mappers.StudentMapper;
+import com.junior.studentRegistrationService.domain.Student;
+import com.junior.studentRegistrationService.domain.StudentRepository;
+import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
 
 public class StudentRepositoryImpl implements StudentRepository {
 
@@ -25,7 +25,7 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public void registerStudent(Student student) {
+    public void enroll(Student student) {
         StudentEntity studentEntity = studentMapper.toJPAEntity(student);
         studentRepositoryJPA.save(studentEntity);
     }

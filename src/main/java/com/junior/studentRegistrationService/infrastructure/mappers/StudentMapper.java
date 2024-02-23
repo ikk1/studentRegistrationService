@@ -1,14 +1,16 @@
-package com.junior.studentRegistrationService.infrastructure.persistence.mappers;
+package com.junior.studentRegistrationService.infrastructure.mappers;
 
+import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
-import com.junior.studentRegistrationService.domain.entities.Student;
-import com.junior.studentRegistrationService.domain.valueobjects.EmailMapper;
+import com.junior.studentRegistrationService.infrastructure.web.dto.StudentDTO;
+import com.junior.studentRegistrationService.domain.Student;
 import com.junior.studentRegistrationService.infrastructure.persistence.StudentEntity;
 
-@Mapper(componentModel = "spring", uses = EmailMapper.class)
+@Mapper(componentModel = "spring",
+        uses = ValueObjectMapper.class,
+        injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface StudentMapper {
 
     @Mapping(target = "email", source = "email")
@@ -20,7 +22,5 @@ public interface StudentMapper {
     @Mapping(target = "email", source = "email")
     Student toDomainEntity(StudentDTO studentDTO);
 
-    @Mapping(target = "email", source = "email")
-    StudentDTO toDto(Student student);
     
 }

@@ -1,6 +1,6 @@
 package com.junior.studentRegistrationService.infrastructure.persistence;
 
-import com.junior.studentRegistrationService.domain.enums.Course;
+import com.junior.studentRegistrationService.domain.Course;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

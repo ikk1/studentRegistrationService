@@ -1,8 +1,8 @@
-package com.junior.studentRegistrationService.domain.valueobjects;
+package com.junior.studentRegistrationService.domain;
 
-public class Email {
+public class Email implements ValueObject<String> {
 
-    private String address;
+    private String value;
 
     public Email(String address) {
 
@@ -10,10 +10,14 @@ public class Email {
                 + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$"))
             throw new IllegalArgumentException("Invalid e-mail address!");
 
-        this.address = address;
+        this.value = address;
     }
 
     public String getAddress() {
-        return address;
+        return value;
+    }
+
+    public String getValue() {
+        return value;
     }
 }

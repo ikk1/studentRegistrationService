@@ -1,8 +1,7 @@
 package com.junior.studentRegistrationService.application.usecases;
 
-import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
+import com.junior.studentRegistrationService.domain.Student;
 
 public interface RegisterStudentUseCase {
-    void execute(StudentDTO studentDTO);
-    void validateStudent(StudentDTO studentDTO);
+    void execute(Student student);
 }
