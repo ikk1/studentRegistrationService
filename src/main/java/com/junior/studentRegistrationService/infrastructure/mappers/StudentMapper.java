@@ -13,14 +13,10 @@ import com.junior.studentRegistrationService.infrastructure.persistence.StudentE
         injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface StudentMapper {
 
-    @Mapping(target = "email", source = "email")
     StudentEntity toJPAEntity(Student student);
 
-    @Mapping(target = "email", source = "email")
     Student toDomainEntity(StudentEntity studentEntity);
-    
-    @Mapping(target = "email", source = "email")
+
     Student toDomainEntity(StudentDTO studentDTO);
 
-    
 }
