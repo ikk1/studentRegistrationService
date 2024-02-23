@@ -16,6 +16,6 @@ public class RabbitMQSenderService {
 
     public void sendMessage(String name, String email) {
         StudentCreatedMessage message = new StudentCreatedMessage(name, email);
-        rabbitTemplate.convertAndSend("student-exchange", "", message);
+        rabbitTemplate.convertAndSend("student-exchange", "student.created", message);
     }
 }

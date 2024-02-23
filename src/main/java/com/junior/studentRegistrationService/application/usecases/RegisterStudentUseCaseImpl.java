@@ -8,7 +8,7 @@ import com.junior.studentRegistrationService.infrastructure.persistence.mappers.
 
 import io.micrometer.common.util.StringUtils;
 
-public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase{
+public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase {
 
     private final StudentRepository studentRepository;
     private final StudentMapper studentMapper;
