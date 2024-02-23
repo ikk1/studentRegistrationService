@@ -1,7 +1,4 @@
-package com.junior.studentRegistrationService.domain.entities;
-
-import com.junior.studentRegistrationService.domain.enums.Course;
-import com.junior.studentRegistrationService.domain.valueobjects.Email;
+package com.junior.studentRegistrationService.domain;
 
 public class Student {
 

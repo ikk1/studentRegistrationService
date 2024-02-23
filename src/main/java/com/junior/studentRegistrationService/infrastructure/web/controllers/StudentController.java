@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService.application.controllers;
+package com.junior.studentRegistrationService.infrastructure.web.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.junior.studentRegistrationService.application.usecases.RegisterStudentUseCaseImpl;
-import com.junior.studentRegistrationService.application.usecases.dto.StudentDTO;
+import com.junior.studentRegistrationService.infrastructure.web.dto.StudentDTO;
 
 @RestController
 public class StudentController {

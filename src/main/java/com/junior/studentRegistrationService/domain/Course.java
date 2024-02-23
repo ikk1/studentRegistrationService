@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService.domain.enums;
+package com.junior.studentRegistrationService.domain;
 
 public enum Course {
     MATH,
