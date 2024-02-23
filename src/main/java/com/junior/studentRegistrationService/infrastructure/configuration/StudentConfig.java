@@ -14,13 +14,8 @@ import com.junior.studentRegistrationService.infrastructure.mappers.StudentMappe
 public class StudentConfig {
     
     @Bean
-    RegisterStudentUseCaseImpl registerStudent(StudentRepositoryImpl studentRepository){
+    public RegisterStudentUseCaseImpl registerStudent(StudentRepositoryImpl studentRepository){
         return new RegisterStudentUseCaseImpl(studentRepository);
-    }
-
-    @Bean
-    StudentRepositoryImpl studentRepositoryImpl(StudentRepositoryJPA studentRepositoryJPA, StudentMapper studentMapper) {
-        return new StudentRepositoryImpl(studentRepositoryJPA, studentMapper);
     }
 
 }

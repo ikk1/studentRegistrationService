@@ -13,6 +13,6 @@ public class RegisterStudentUseCaseImpl implements RegisterStudentUseCase {
 
     @Override
     public void execute(Student student){
-        studentRepository.enroll(student);
+        studentRepository.registerStudent(student);
     }
 }

@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 import com.junior.studentRegistrationService.domain.Student;
 import com.junior.studentRegistrationService.domain.StudentRepository;
 import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
+import org.springframework.stereotype.Component;
 
+@Component
 public class StudentRepositoryImpl implements StudentRepository {
 
     private final StudentRepositoryJPA studentRepositoryJPA;
@@ -25,7 +27,7 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public void enroll(Student student) {
+    public void registerStudent(Student student) {
         StudentEntity studentEntity = studentMapper.toJPAEntity(student);
         studentRepositoryJPA.save(studentEntity);
     }

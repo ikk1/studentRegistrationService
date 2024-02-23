@@ -7,6 +7,6 @@ import com.junior.studentRegistrationService.domain.Student;
 public interface StudentRepository {
 
     List<Student> findByEmail(String email);
-    void enroll(Student student);
+    void registerStudent(Student student);
 
 }
