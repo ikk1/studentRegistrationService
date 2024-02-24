@@ -5,9 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 import com.junior.studentregistrationservice.application.usecases.RegisterStudentUseCaseImpl;
 import com.junior.studentregistrationservice.infrastructure.mappers.StudentMapper;
+import com.junior.studentregistrationservice.infrastructure.messaging.RabbitMQSenderService;
 import com.junior.studentregistrationservice.infrastructure.persistence.StudentRepositoryImpl;
-import com.junior.studentregistrationservice.infrastructure.persistence.StudentRepositoryJPA;
-import com.junior.studentregistrationservice.infrastructure.services.RabbitMQSenderService;
 
 @Configuration
 public class StudentConfig {

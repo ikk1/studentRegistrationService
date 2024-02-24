@@ -3,7 +3,7 @@ package com.junior.studentregistrationservice.application.usecases;
 import com.junior.studentregistrationservice.domain.Student;
 import com.junior.studentregistrationservice.domain.StudentRepository;
 import com.junior.studentregistrationservice.infrastructure.mappers.StudentMapper;
-import com.junior.studentregistrationservice.infrastructure.services.RabbitMQSenderService;
+import com.junior.studentregistrationservice.infrastructure.messaging.RabbitMQSenderService;
 import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
 
 import io.micrometer.common.util.StringUtils;
