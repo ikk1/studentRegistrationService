@@ -1,10 +1,10 @@
-package com.junior.studentRegistrationService.infrastructure.mappers;
+package com.junior.studentregistrationservice.infrastructure.mappers;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.mapstruct.TargetType;
 
-import com.junior.studentRegistrationService.domain.ValueObject;
+import com.junior.studentregistrationservice.domain.ValueObject;
 
 public interface ValueObjectMapper {
 

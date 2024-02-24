@@ -1,4 +1,4 @@
-package com.junior.studentRegistrationService.domain;
+package com.junior.studentregistrationservice.domain;
 
 public class Email implements ValueObject<String> {
 

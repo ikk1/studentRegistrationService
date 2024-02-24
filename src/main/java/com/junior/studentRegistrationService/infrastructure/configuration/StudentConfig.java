@@ -1,13 +1,13 @@
-package com.junior.studentRegistrationService.infrastructure.configuration;
+package com.junior.studentregistrationservice.infrastructure.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.junior.studentRegistrationService.application.usecases.RegisterStudentUseCaseImpl;
-import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
-import com.junior.studentRegistrationService.infrastructure.persistence.StudentRepositoryImpl;
-import com.junior.studentRegistrationService.infrastructure.persistence.StudentRepositoryJPA;
-import com.junior.studentRegistrationService.infrastructure.services.RabbitMQSenderService;
+import com.junior.studentregistrationservice.application.usecases.RegisterStudentUseCaseImpl;
+import com.junior.studentregistrationservice.infrastructure.mappers.StudentMapper;
+import com.junior.studentregistrationservice.infrastructure.persistence.StudentRepositoryImpl;
+import com.junior.studentregistrationservice.infrastructure.persistence.StudentRepositoryJPA;
+import com.junior.studentregistrationservice.infrastructure.services.RabbitMQSenderService;
 
 @Configuration
 public class StudentConfig {

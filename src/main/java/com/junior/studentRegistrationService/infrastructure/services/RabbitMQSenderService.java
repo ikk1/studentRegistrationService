@@ -1,10 +1,10 @@
-package com.junior.studentRegistrationService.infrastructure.services;
+package com.junior.studentregistrationservice.infrastructure.services;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.junior.studentRegistrationService.infrastructure.messaging.StudentCreatedMessage;
+import com.junior.studentregistrationservice.infrastructure.messaging.StudentCreatedMessage;
 
 @Service
 public class RabbitMQSenderService {
