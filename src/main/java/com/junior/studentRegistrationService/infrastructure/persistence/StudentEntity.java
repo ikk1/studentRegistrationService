@@ -23,6 +23,8 @@ public class StudentEntity {
     @Enumerated(EnumType.STRING)
     private Course course;
 
+    public StudentEntity() {}
+
     public StudentEntity(String name, String email, String address, Course course) {
         this.name = name;
         this.email = email;
