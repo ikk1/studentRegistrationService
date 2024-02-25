@@ -1,11 +1,15 @@
 package com.junior.studentregistrationservice.infrastructure.web.controllers;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.junior.studentregistrationservice.application.usecases.ListStudentUseCaseImpl;
 import com.junior.studentregistrationservice.application.usecases.RegisterStudentUseCaseImpl;
 import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
 
@@ -13,9 +17,12 @@ import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
 public class StudentController {
 
     private RegisterStudentUseCaseImpl registerStudentUseCase;
+    private ListStudentUseCaseImpl listStudentUseCase;
 
-    public StudentController(RegisterStudentUseCaseImpl registerStudentUseCase) {
+    public StudentController(RegisterStudentUseCaseImpl registerStudentUseCase,
+            ListStudentUseCaseImpl listStudentUseCase) {
         this.registerStudentUseCase = registerStudentUseCase;
+        this.listStudentUseCase = listStudentUseCase;
     }
 
     @PostMapping("/students")
@@ -28,4 +35,16 @@ public class StudentController {
                     .body("Failed to register student: " + e.getMessage());
         }
     }
+
+    @GetMapping("/students")
+    public ResponseEntity<List<StudentDTO>> listAllStudents() {
+        try {
+            List<StudentDTO> listAllStudents = listStudentUseCase.listAllStudents();
+            return ResponseEntity.status(HttpStatus.OK).body(listAllStudents);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null);
+        }
+    }
+
 }

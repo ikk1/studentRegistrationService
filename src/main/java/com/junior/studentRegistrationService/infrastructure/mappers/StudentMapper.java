@@ -16,4 +16,6 @@ public interface StudentMapper {
 
     Student toDomainEntity(StudentDTO studentDTO);
 
+    StudentDTO toDTO(Student student);
+
 }

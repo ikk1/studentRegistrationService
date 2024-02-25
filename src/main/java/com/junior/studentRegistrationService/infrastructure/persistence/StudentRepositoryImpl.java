@@ -33,4 +33,12 @@ public class StudentRepositoryImpl implements StudentRepository {
         StudentEntity studentEntity = studentMapper.toJPAEntity(student);
         studentRepositoryJPA.save(studentEntity);
     }
+
+    @Override
+    public List<Student> listAllStudents() {
+        List<StudentEntity> studentsByEmail = studentRepositoryJPA.findAll();
+        List<Student> ret = studentsByEmail.stream().map(s -> studentMapper.toDomainEntity(s))
+                .collect(Collectors.toList());
+        return ret;
+    }
 }
