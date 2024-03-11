@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice.infrastructure.configuration;
+package com.junior.studentRegistrationService.infrastructure.configuration;
 
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

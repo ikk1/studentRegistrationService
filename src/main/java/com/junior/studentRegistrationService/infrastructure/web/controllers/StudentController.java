@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice.infrastructure.web.controllers;
+package com.junior.studentRegistrationService.infrastructure.web.controllers;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.junior.studentregistrationservice.application.usecases.ListStudentUseCaseImpl;
-import com.junior.studentregistrationservice.application.usecases.RegisterStudentUseCaseImpl;
-import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
+import com.junior.studentRegistrationService.application.usecases.ListStudentUseCaseImpl;
+import com.junior.studentRegistrationService.application.usecases.RegisterStudentUseCaseImpl;
+import com.junior.studentRegistrationService.infrastructure.web.dto.StudentDTO;
 
 @RestController
 public class StudentController {

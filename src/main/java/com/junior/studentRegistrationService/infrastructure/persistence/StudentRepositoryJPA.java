@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice.infrastructure.persistence;
+package com.junior.studentRegistrationService.infrastructure.persistence;
 
 import java.util.List;
 

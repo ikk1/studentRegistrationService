@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice.domain;
+package com.junior.studentRegistrationService.domain;
 
 public interface ValueObject<T> {
     T getValue();

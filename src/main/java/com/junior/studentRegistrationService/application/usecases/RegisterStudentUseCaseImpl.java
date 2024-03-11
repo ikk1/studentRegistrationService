@@ -1,10 +1,10 @@
-package com.junior.studentregistrationservice.application.usecases;
+package com.junior.studentRegistrationService.application.usecases;
 
-import com.junior.studentregistrationservice.domain.Student;
-import com.junior.studentregistrationservice.domain.StudentRepository;
-import com.junior.studentregistrationservice.infrastructure.mappers.StudentMapper;
-import com.junior.studentregistrationservice.infrastructure.messaging.RabbitMQSenderService;
-import com.junior.studentregistrationservice.infrastructure.web.dto.StudentDTO;
+import com.junior.studentRegistrationService.domain.Student;
+import com.junior.studentRegistrationService.domain.StudentRepository;
+import com.junior.studentRegistrationService.infrastructure.mappers.StudentMapper;
+import com.junior.studentRegistrationService.infrastructure.messaging.RabbitMQSenderService;
+import com.junior.studentRegistrationService.infrastructure.web.dto.StudentDTO;
 
 import io.micrometer.common.util.StringUtils;
 

@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice.infrastructure.messaging;
+package com.junior.studentRegistrationService.infrastructure.messaging;
 
 import java.io.Serializable;
 

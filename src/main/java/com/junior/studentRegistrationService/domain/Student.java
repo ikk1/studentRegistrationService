@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice.domain;
+package com.junior.studentRegistrationService.domain;
 
 public class Student {
 
@@ -13,6 +13,10 @@ public class Student {
         this.email = email;
         this.address = address;
         this.course = course;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {

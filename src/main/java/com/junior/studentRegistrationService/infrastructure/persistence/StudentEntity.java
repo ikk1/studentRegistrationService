@@ -1,6 +1,6 @@
-package com.junior.studentregistrationservice.infrastructure.persistence;
+package com.junior.studentRegistrationService.infrastructure.persistence;
 
-import com.junior.studentregistrationservice.domain.Course;
+import com.junior.studentRegistrationService.domain.Course;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

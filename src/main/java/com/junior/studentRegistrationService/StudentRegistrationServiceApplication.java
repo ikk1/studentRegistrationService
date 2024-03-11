@@ -1,4 +1,4 @@
-package com.junior.studentregistrationservice;
+package com.junior.studentRegistrationService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
