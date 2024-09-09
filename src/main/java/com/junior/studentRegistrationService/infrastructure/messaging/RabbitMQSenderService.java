@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
-public class RabbitMQSenderService {
+public class RabbitMQSenderService implements SenderService {
 
     private RabbitTemplate rabbitTemplate;
     private ObjectMapper parser;
@@ -16,6 +16,7 @@ public class RabbitMQSenderService {
         this.parser = parser;
     }
 
+    @Override
     public void sendMessage(String name, String email) {
         try {
             StudentCreatedMessage message = new StudentCreatedMessage(name, email);
